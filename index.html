@@ -158,31 +158,10 @@
     </div>
   </div>
 
-  <!-- Phone mockup — mô phỏng UI thật của app, không cần ảnh chụp -->
-  <div class="hero-visual" aria-hidden="true">
-    <div class="phone">
-      <div class="phone-notch"></div>
-      <div class="phone-screen">
-        <div class="phone-greeting">Chào buổi sáng 👋</div>
-        <div class="phone-name">Minh Tú · Lớp 12</div>
-
-        <div class="phone-chip-row">
-          <div class="phone-chip">🔥 12 ngày</div>
-          <div class="phone-chip">💎 340</div>
-        </div>
-
-        <div class="phone-progress-card">
-          <div class="phone-progress-label"><span>Daily Quest</span><span>2/3</span></div>
-          <div class="phone-progress-bar"><div class="phone-progress-fill" style="width:66%"></div></div>
-        </div>
-
-        <div class="phone-quiz-card">
-          <div class="phone-quiz-q">Kim loại nào tan trong dd NaOH loãng?</div>
-          <div class="phone-quiz-opt">A. Fe</div>
-          <div class="phone-quiz-opt correct">C. Al ✓</div>
-          <div class="phone-quiz-opt">D. Ag</div>
-        </div>
-      </div>
+  <!-- Ảnh chụp màn hình thật của app -->
+  <div class="hero-visual">
+    <div class="hero-shot">
+      <img src="/assets/images/screenshots/shot-1-home.jpg" alt="Màn hình Trang chủ Chembloom — streak, daily quest, gem" width="260" height="563" loading="eager">
     </div>
   </div>
 
@@ -264,6 +243,22 @@
       <h3>Thi đua với bạn bè</h3>
       <p>Bảng xếp hạng tuần, thách đấu quiz 1v1, friend code để kết nối. Học vui hơn khi có đối thủ.</p>
     </article>
+  </div>
+</section>
+
+<!-- ── SCREENSHOTS (ảnh chụp thật) ── -->
+<section class="section section-alt" aria-labelledby="shots-title">
+  <div class="section-tag" aria-hidden="true">📱 Xem giao diện thật</div>
+  <h2 class="section-title" id="shots-title">App trông như thế nào?</h2>
+  <p class="section-sub">Không dựng ảnh — đây là giao diện thật của Chembloom trên iPhone.</p>
+
+  <div class="shots-scroll" role="list" aria-label="Ảnh chụp màn hình Chembloom">
+    <div class="shot-card" role="listitem"><img src="/assets/images/screenshots/shot-1-home.jpg" alt="Trang chủ: streak, daily quest, lộ trình học" loading="lazy" width="210" height="455"></div>
+    <div class="shot-card" role="listitem"><img src="/assets/images/screenshots/shot-2-quiz.jpg" alt="Màn hình làm quiz với timer và gợi ý" loading="lazy" width="210" height="455"></div>
+    <div class="shot-card" role="listitem"><img src="/assets/images/screenshots/shot-3-result.jpg" alt="Kết quả bài quiz — phân tích chi tiết từng câu" loading="lazy" width="210" height="455"></div>
+    <div class="shot-card" role="listitem"><img src="/assets/images/screenshots/shot-4-exam.jpg" alt="Chế độ luyện đề thi THPT, học kỳ, học sinh giỏi" loading="lazy" width="210" height="455"></div>
+    <div class="shot-card" role="listitem"><img src="/assets/images/screenshots/shot-5-periodic.jpg" alt="Bảng tuần hoàn nguyên tố tương tác" loading="lazy" width="210" height="455"></div>
+    <div class="shot-card" role="listitem"><img src="/assets/images/screenshots/shot-6-paywall.jpg" alt="Màn hình nâng cấp Chembloom Pro" loading="lazy" width="210" height="455"></div>
   </div>
 </section>
 
@@ -597,7 +592,7 @@
 <script>
 (function () {
   var targets = document.querySelectorAll(
-    '.feat-card, .launch-card, .plan, .faq-list details, .video-wrapper'
+    '.feat-card, .launch-card, .plan, .faq-list details, .video-wrapper, .shot-card'
   );
   if (!targets.length) return;
 
