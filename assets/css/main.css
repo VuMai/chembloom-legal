@@ -274,7 +274,7 @@ ul { list-style: none; }
 .hero-stat-num { font-size: 28px; font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1; margin-bottom: 4px; }
 .hero-stat-label { font-size: 12px; color: var(--faint); font-weight: 500; }
 
-/* ── Phone mockup (mock UI, không cần ảnh thật) ── */
+/* ── Hero shot (ảnh chụp màn hình thật) ── */
 .hero-visual {
   position: relative;
   z-index: 1;
@@ -283,75 +283,39 @@ ul { list-style: none; }
   padding: 56px 24px 0;
 }
 
-.phone {
-  width: 272px;
-  border-radius: 42px;
-  background: linear-gradient(165deg, #1c1b30, #0d0c18);
-  border: 1px solid rgba(255,255,255,0.10);
-  padding: 12px;
-  box-shadow: 0 40px 90px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.03);
-  position: relative;
-}
-
-.phone-notch {
-  position: absolute;
-  top: 12px; left: 50%; transform: translateX(-50%);
-  width: 90px; height: 20px;
-  background: #0d0c18;
-  border-radius: 100px;
-  z-index: 2;
-}
-
-.phone-screen {
-  border-radius: 32px;
-  background: linear-gradient(175deg, #201f3a 0%, #14132a 55%, #0f0e22 100%);
-  padding: 30px 16px 18px;
+.hero-shot {
+  width: 260px;
+  border-radius: 30px;
   overflow: hidden;
-  position: relative;
-  min-height: 520px;
+  box-shadow: 0 40px 90px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06);
 }
+.hero-shot img { width: 100%; display: block; }
 
-.phone-greeting { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
-.phone-name { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 18px; }
+/* ── Screenshots gallery (ảnh chụp thật, cuộn ngang) ── */
+.shots-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 8px 4px 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.shots-scroll::-webkit-scrollbar { height: 6px; }
+.shots-scroll::-webkit-scrollbar-track { background: transparent; }
+.shots-scroll::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
 
-.phone-chip-row { display: flex; gap: 8px; margin-bottom: 16px; }
-.phone-chip {
-  display: flex; align-items: center; gap: 5px;
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 100px;
-  padding: 6px 11px;
-  font-size: 12px; font-weight: 700; color: #fff;
+.shot-card {
+  flex: 0 0 auto;
+  width: 210px;
+  scroll-snap-align: start;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-
-.phone-progress-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  padding: 14px;
-  margin-bottom: 12px;
-}
-.phone-progress-label { font-size: 11.5px; color: rgba(255,255,255,0.55); font-weight: 700; margin-bottom: 8px; display: flex; justify-content: space-between; }
-.phone-progress-bar { height: 6px; border-radius: 4px; background: rgba(255,255,255,0.08); overflow: hidden; }
-.phone-progress-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--indigo), var(--violet)); }
-
-.phone-quiz-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  padding: 14px;
-}
-.phone-quiz-q { font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 10px; line-height: 1.4; }
-.phone-quiz-opt {
-  font-size: 11.5px; font-weight: 600; color: rgba(255,255,255,0.7);
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 9px;
-  padding: 8px 10px;
-  margin-bottom: 6px;
-}
-.phone-quiz-opt:last-child { margin-bottom: 0; }
-.phone-quiz-opt.correct { border-color: rgba(52,211,153,0.5); background: rgba(52,211,153,0.12); color: #6ee7b7; }
+.shot-card:hover { transform: translateY(-5px); box-shadow: 0 22px 50px rgba(99,102,241,0.25); }
+.shot-card img { width: 100%; display: block; }
 
 /* ════════════════════════════════════
    SOCIAL PROOF BAR
@@ -825,6 +789,6 @@ footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding
   .quiz-result-ctas a, .quiz-retry-btn { width: 100%; text-align: center; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .phone { width: 232px; }
-  .phone-screen { min-height: 460px; }
+  .hero-shot { width: 210px; }
+  .shot-card { width: 168px; }
 }
